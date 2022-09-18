@@ -1,5 +1,8 @@
 ﻿namespace DesignPatterns.Mediator
 {
+    /// <summary>
+    /// Concrete Colleague
+    /// </summary>
     public class Buyer : User
     {
         public Buyer(ITransfer transfer) : base(transfer)
