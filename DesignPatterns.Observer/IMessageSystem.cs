@@ -5,8 +5,8 @@
     /// </summary>
     public interface IMessageSystem
     {
-        void addUser(User user);
-        void removeUser(User user);
+        void addUser(IAbone user);
+        void removeUser(IAbone user);
         void sendMessage(string message);
     }
 }

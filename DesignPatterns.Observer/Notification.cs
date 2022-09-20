@@ -11,12 +11,12 @@
 
 
 
-        public void addUser(User user)
+        public void addUser(IAbone user)
         {
             _users.Add(user);
         }
 
-        public void removeUser(User user)
+        public void removeUser(IAbone user)
         {
             _users.Remove(user);
         }

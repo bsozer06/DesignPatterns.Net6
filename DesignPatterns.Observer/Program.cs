@@ -1,8 +1,8 @@
 ﻿using DesignPatterns.Observer;
 
-var banker = new User();
-var customer = new User();
-var officer = new User();
+var banker = new BankerObserver();
+var customer = new CustomerObserver();
+var officer = new OfficerObserver();
 
 var notificaiton = new Notification();
 
