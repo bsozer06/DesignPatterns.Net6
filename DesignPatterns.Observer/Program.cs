@@ -10,4 +10,7 @@ notificaiton.addUser(banker);
 notificaiton.addUser(customer);
 notificaiton.addUser(officer);
 
-notificaiton.sendMessage("this is notification.");
+notificaiton.sendMessage("Notification: Price was spent.");
+
+notificaiton.removeUser(banker);
+notificaiton.sendMessage("Notification: Contrant will be signed.");

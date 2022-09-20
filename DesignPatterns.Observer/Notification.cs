@@ -25,7 +25,7 @@
         {
             foreach (var user in _users)
             {
-                Console.WriteLine($"Sent to one of obvservers. Message:{message}");
+                user?.getMessage(message);
             }
         }
     }
