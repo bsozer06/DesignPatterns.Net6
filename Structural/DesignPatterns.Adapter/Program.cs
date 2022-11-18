@@ -1,8 +1,8 @@
 ﻿using DesignPatterns.Adapter;
 
-var instance = new CryptClassC();
+CryptClassC instance = new();
 
-var cryptClassCAdapter = new CryptClassCAdapter(instance);
+CryptClassCAdapter cryptClassCAdapter = new(instance);
 
 cryptClassCAdapter.Encrypt("");
 cryptClassCAdapter.Decrypt("");
