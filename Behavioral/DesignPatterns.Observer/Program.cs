@@ -1,16 +1,31 @@
-﻿using DesignPatterns.Observer;
+﻿//using DesignPatterns.Observer;
+using DesignPatterns.Observer.BasicExample.Concrete;
 
-var banker = new BankerObserver();
-var customer = new CustomerObserver();
-var officer = new OfficerObserver();
+Subject subject = new();
+ConcreteObserverA observerA = new();
+ConcreteObserverB observerB = new();
 
-var notificaiton = new Notification();
+subject.Attach(observerA);
+subject.Attach(observerB);
 
-notificaiton.addUser(banker);
-notificaiton.addUser(customer);
-notificaiton.addUser(officer);
+subject.SomeBusinessLogic();
+subject.SomeBusinessLogic();
 
-notificaiton.sendMessage("Notification: Price was spent.");
+subject.Detach(observerB);
 
-notificaiton.removeUser(banker);
-notificaiton.sendMessage("Notification: Contrant will be signed.");
+subject.SomeBusinessLogic();
+
+//var banker = new BankerObserver();
+//var customer = new CustomerObserver();
+//var officer = new OfficerObserver();
+
+//var notificaiton = new Notification();
+
+//notificaiton.addUser(banker);
+//notificaiton.addUser(customer);
+//notificaiton.addUser(officer);
+
+//notificaiton.sendMessage("Notification: Price was spent.");
+
+//notificaiton.removeUser(banker);
+//notificaiton.sendMessage("Notification: Contrant will be signed.");
